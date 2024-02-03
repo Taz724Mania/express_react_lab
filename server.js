@@ -1,35 +1,36 @@
-//Deps
-const express = require("express")
-const cors = require("cors")
+// Import Dependencies
+const express = require("express");
+const cors = require("cors");
 
-//JSONs
-const projects = require("./projects.json")
-const about = require("./about.json")
+// Import JSON files
+const projects = require("./projects.json");
+const about = require("./about.json");
 
-//App Object
-const app = express()
+// Create our app object
+const app = express();
 
-//Middleware
-app.use(cors())
+// set up middleware
+app.use(cors());
 
-//home route
+//home route for testing our app
 app.get("/", (req, res) => {
-    res.send("Suhhh, dude")
-})
+  res.send("Hello World");
+});
 
-//route retrieving projects
+// route for retrieving projects
 app.get("/projects", (req, res) => {
-    //send projects via JSON
-    res.json(projects)
-})
+  // send projects via JSON
+  res.json(projects);
+});
 
-//route retrieving about
+// route for retrieving about info
 app.get("/about", (req, res) => {
-    res.json(about)
-})
+  // send projects via JSON
+  res.json(about);
+});
 
-//declare port
-const PORT = process.env.PORT || 4000
+//declare a variable for our port number
+const PORT = process.env.PORT || 4000;
 
-//turn it on
-app.listen(PORT, () => console.log(`Port not starboard at ${PORT}`))
+// turn on the server listener
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
