@@ -3,12 +3,12 @@
         "name": "The Monster Site of Monsters",
         "live": "https://project1-five-teal.vercel.app/",
         "git": "https://github.com/Taz724Mania/Project1",
-        "image": "./public/images/MSM.png"
+        "image": "./MSM.png"
     },
     {
         "name": "Shopping List",
         "live": "https://tc-seal-project2.onrender.com/",
         "git": "https://github.com/Taz724Mania/project2",
-        "image": "./public/images/SL.png"
+        "image": "./SL.png"
     }
 ]
